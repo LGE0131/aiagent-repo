@@ -35,10 +35,10 @@ total_result = []
 
 
 # 현재 프롬프트 설정 (프롬프트가 길어서 따로 .txt로 저장)
-current_prompt = load_text_file("prompt_eng_v1.txt")
+current_prompt = load_text_file("prompt_v2.txt")
 
 # JSON 파일명에 붙을 버전명 작성
-version_name = "eng_v1"
+version_name = "v2"
 
 
 #dataset.json 불러오고, customer_message 분류 실행
@@ -63,7 +63,7 @@ with open("dataset.jsonl", "r", encoding="utf-8") as file:
                     "response_mime_type": "application/json",
                     "response_json_schema": ClassifyTicket.model_json_schema(),
                     "temperature": 0.1,
-                    "max_output_tokens": 450,
+                    "max_output_tokens": 440,
                 },
             )
 
